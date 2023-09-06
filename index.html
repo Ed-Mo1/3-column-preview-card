@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | 3-column preview card component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Lexend+Deca:wght@400;700&family=Space+Grotesk:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        font-size: 15px;
+        --green-color: hsl(179, 100%, 13%);
+        --blue-color: hsl(184, 100%, 22%);
+        --orange-color: hsl(31, 77%, 52%);
+      }
+      body {
+        font-family: "Lexend Deca", sans-serif !important;
+        min-height: 100vh;
+        overflow-x: hidden;
+        display: grid;
+        place-content: center;
+      }
+      .row {
+        height: 85vh;
+        width: 80%;
+      }
+      .card {
+        border-radius: 0;
+        border: none;
+      }
+      .card:nth-child(1) {
+        border-radius: 15px 0 0 15px;
+      }
+
+      .card:nth-child(3) {
+        border-radius: 0 15px 15px 0;
+      }
+
+      img {
+        width: fit-content;
+      }
+      .btn {
+        width: fit-content;
+      }
+      a {
+        background-color: white !important;
+        text-transform: capitalize;
+        transition: all 0.5s ease-in;
+        border: 1px solid white !important;
+      }
+      .card:nth-child(1) a {
+        color: var(--orange-color);
+      }
+      .card:nth-child(2) a {
+        color: var(--blue-color);
+      }
+      .card:nth-child(3) a {
+        color: var(--green-color);
+      }
+      a:hover {
+        color: #fff !important;
+        background-color: transparent !important;
+      }
+      .card:nth-child(1) {
+        background-color: var(--orange-color);
+      }
+      .card:nth-child(2) {
+        background-color: var(--blue-color);
+      }
+      .card:nth-child(3) {
+        background-color: var(--green-color);
+      }
+      .attribution {
+        margin-top: 20px;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      @media (width>=1600px) {
+        :root {
+          font-size: 23px;
+        }
+      }
+      @media (width<992px) {
+        .row {
+          height: auto;
+        }
+        .card:nth-child(1) {
+          border-radius: 15px 15px 0 0;
+        }
+
+        .card:nth-child(3) {
+          border-radius: 0 0 15px 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row row-cols-1 my-4 my-lg-0 row-cols-lg-3 mx-auto">
+      <div class="card px-2 px-md-4 py-5 text-light">
+        <div class="card-body d-flex flex-column">
+          <img src="./images/icon-sedans.svg" />
+          <h5 class="card-title text-uppercase my-4 my-lg-5 display-6 fw-bold">
+            Sedans
+          </h5>
+          <p class="card-text text-white-50 mb-3 mb-lg-0 text-capitalize lh-lg">
+            Choose a sedan for its affordability and excellent fuel economy.
+            Ideal for cruising in the city or on your next road trip.
+          </p>
+          <div class="link h-100 d-flex align-items-end">
+            <a class="btn rounded-pill py-3 px-5 d-block">leran more</a>
+          </div>
+        </div>
+      </div>
+      <div class="card text-light px-2 px-md-4 py-5 text-light">
+        <div class="card-body d-flex flex-column">
+          <img src="./images/icon-suvs.svg" />
+
+          <h5 class="card-title my-4 my-lg-5 fw-bold text-uppercase display-6">
+            SUVs
+          </h5>
+          <p class="card-text text-white-50 mb-3 mb-lg-0 text-capitalize lh-lg">
+            Take an SUV for its spacious interior, power, and versatility.
+            Perfect for your next family vacation and off-road adventures.
+          </p>
+          <div class="link h-100 d-flex align-items-end">
+            <a class="btn rounded-pill py-3 px-5 d-block">leran more</a>
+          </div>
+        </div>
+      </div>
+      <div class="card text-light px-2 px-md-4 py-5 text-light">
+        <div class="card-body d-flex flex-column">
+          <img src="./images/icon-luxury.svg" />
+          <h5
+            class="card-title text-uppercase fw-bold my-4 my-lg-5 display-6 my-5"
+          >
+            Luxury
+          </h5>
+          <p class="card-text text-white-50 lh-lg text-capitalize lh-lg">
+            Cruise in the best car brands without the bloated prices. Enjoy the
+            enhanced comfort of a luxury rental and arrive in style.
+          </p>
+          <div class="link h-100 d-flex mb-3 mb-lg-0 align-items-end">
+            <a class="btn rounded-pill py-3 px-5 d-block">leran more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/Ed-Mo1" target="_blank"
+        >Eyad Muhammad</a
+      >.
+    </div>
+  </body>
+</html>
